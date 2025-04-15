@@ -1,0 +1,107 @@
+(base) D:\Coding\ST_demo\STM32CubeExpansion_STSAFE-A_V1.2.1\Projects\STM32L476RG-Nucleo\Demonstration\STSAFE_A_using_X_Cube_CryptoLib\SPDM>python SPDM_test.py             
+----------------------------------------------------------------------
+TEST CMD: Check curve type in slot 0 
+Sending Command:  fa 01
+Received Response:  01
+TEST CMD: NIST P-384 
+----------------------------------------------------------------------
+TEST CMD:Echo 
+Sending Command:  fa 00 00 01 aa 03
+Received Response:  00 01 aa 03
+----------------------------------------------------------------------
+TEST CMD: Check HOST KEY Slot
+Sending Command:  fa 02 00
+Received Response:  00
+TEST CMD: No HOST KEY present
+.-----OPTIONAL STEP - VERIFYING IF LEAF CERT WAS SIGNED BY ROOT(should be done by Requester)---------------------------
+Chain of trust verified successfully!
+.----------------------------------------------------------------------
+TEST VERIFY SIGNATURE
+Sending Command:  fa 03 20 39 d4 2b bd a9 90 af 39 45 39 4e cc 7b fc a5 ba fb 91 57 5d 58 e2 3e ff 1d d5 ac d0 0b 84 04 be 20 32 eb cd 50 5a 46 de a6 ab 67 9b c5 b8 66 94 1e 46 28 72 94 d4 3e d0 36 e8 45 9e 7f 2d 67 a1 8f 20 2b b5 82 4b 41 e1 00 b4 09 0f 99 41 64 07 98 d0 4a bb 85 d8 d9 13 95 b4 21 c5 dd 67 f4 df 9c 37 20 47 f6 57 26 62 a6 2e 1c 18 23 52 39 97 5b c5 b2 95 a1 d9 c1 70 e7 1c 8a ef d3 0f f8 da af 4a 72 20 b3 03 54 27 d8 66 8b 7a 37 94 9a 54 24 80 b3 b8 b6 4f 43 2d 52 52 3b cc 2a 4b 14 bb 48 a3 85 f1
+Received Response:  01
+TEST CVerify Signature: Signature is CORRECT 
+.----------------------------------------------------------------------
+TEST VERIFY SIGNATURE
+Sending Command:  fa 03 20 3f cb 4b f2 82 58 12 3e 40 0d de d2 0d ec 67 9f a6 81 72 dd 3f 0c 35 6b 8d 92 50 7c 7f b2 b1 15 20 65 3f 18 6a 85 5c 31 5b ea 68 4c b7 55 e2 a8 a8 7a d9 0d 7b fd 89 ab 62 ec bc b6 26 4b 7f a5 a9 20 46 bd f0 8b 3d d6 23 42 4f bb 65 db 50 30 c5 7c 6d f6 fc bf aa c8 fc 0d af d0 a5 c1 05 95 cb 6c 21 00 9b 2d b4 6b 4f 38 c6 7c 37 c8 49 79 cc 07 2f 1e 45 c2 9f e2 1b a3 c1 ff 80 91 14 1e 5a 33 68 c0 20 b3 03 54 27 d8 66 8b 7a 37 94 9a 54 24 80 b3 b8 b6 4f 43 2d 52 52 3b cc 2a 4b 14 bb 48 a3 85 f1
+Received Response:  01
+TEST CVerify Signature: Signature is CORRECT 
+.----------------------------------------------------------------------
+TEST VERIFY SIGNATURE
+Sending Command:  fa 03 20 ba bf ab ec d1 b3 37 f4 9c 3e 16 9f 8a 99 c0 c1 41 fe 8c 7b fc 25 99 f1 46 2f 6b ec a6 6c c9 c6 20 bd 0b d9 2f 0f 66 ec 84 53 7d e9 c8 de 48 ff 84 6c 9f dc a5 21 1d 5b 77 ea 69 c2 1b e1 49 5a a4 20 32 77 1b 9f a6 73 15 36 aa c1 66 aa 24 12 aa 69 16 44 cc c1 a9 8b 9e 92 9d e3 b3 69 83 7b 88 de 20 0d 90 68 98 0f bf 89 87 45 38 bb 89 b7 6f 62 7c a1 67 15 b4 67 14 df 6f 8a 2b 25 14 cb af 7d 8c 30 2b a7 1d e5 20 52 66 4a 4e 5f 6b 49 da e4 20 c5 60 71 44 9e b8 d8 51 cb 05 fe ca 80 9f af e9 39 2e 9a d3 dc 55 a3 d6 4b 26 e8 6b 49 39 cf 24 c5
+Received Response:  01
+TEST CVerify Signature: Signature is CORRECT 
+.----------------------------------------------------------------------
+GET_VERSION
+Sending Command:  10 84 00 00
+Received Response:  10 04 00 00 00 01 00 12
+Number of version entries:  1
+Selected Version:  0x12
+----------------------------------------------------------------------
+GET_CAPABILITIES
+Sending Command:  12 e1 00 00 00 00 00 00 06 00 00 00 12 00 00 00 12 00 00 00
+Received Response:  12 61 00 00 00 00 00 00 16 00 00 00 00 00 04 00 00 00 04 00
+CACHE_CAP:  0
+CERT_CAP:  1
+CHAL_CAP:  1
+MEAS_CAP:  2
+MEAS_FRESH_CAP:  0
+ENCRYPT_CAP:  0
+MAC_CAP:  0
+DataTransferSize: 1024 bytes
+MaxSPDMmsgSize: 1024 bytes
+----------------------------------------------------------------------
+NEGOTIATE_ALGORITHMS
+Sending Command:  12 e3 04 00 30 00 01 00 ff 0f 00 00 7f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 20 7f 00 03 20 0f 00 04 20 ff 05 05 20 01 00
+Received Response:  12 63 00 00 28 00 01 00 04 00 00 00 80 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 20 80 00
+{'MeasurementHashAlgo': ['TPM_ALG_SHA_384'], 'BaseAsymSel': ['TPM_ALG_ECDSA_ECC_NIST_P384'], 'BaseHashSel': ['TPM_ALG_SHA_384'], 'RespAlgStruct': [4, 32, 128, 0]}
+----------------------------------------------------------------------
+GET_CERTIFICATE
+Sending Command:  12 82 00 00 00 00 ff ff
+Received Response:  12 02 00 00 de 03 00 00 de 03 00 00 50 e1 59 0c 3d 7c 3a 75 bc c5 6e c7 a6 1c 58 7a 73 20 5b a8 33 8f eb c2 4c 25 87 ae 1b 15 01 44 53 43 5c e8 28 94 50 f5 e6 84 22 8d 76 88 38 35 30 82 01 dd 30 82 01 63 a0 03 02 01 02 02 01 01 30 0a 06 08 2a 86 48 ce 3d 04 03 03 30 4f 31 0b 30 09 06 03 55 04 06 13 02 4e 4c 31 1e 30 1c 06 03 55 04 0a 0c 15 53 54 4d 69 63 72 6f 65 6c 65 63 74 72 6f 6e 69 63 73 20 6e 76 31 20 30 1e 06 03 55 04 03 0c 17 53 54 4d 20 53 54 53 41 46 45 2d 41 20 54 45 53 54 20 43 41 20 30 32 30 1e 17 0d 32 33 30 35 33 31 30 30 30 30 30 30 5a 17 0d 34 33 30 35 33 31 30 30 30 30 30 30 5a 30 4f 31 0b 30 09 06 03 55 04 06 13 02 4e 4c 31 1e 30 1c 06 03 55 04 0a 0c 15 53 54 4d 69 63 72 6f 65 6c 65 63 74 72 6f 6e 69 63 73 20 6e 76 31 20 30 1e 06 03 55 04 03 0c 17 53 54 4d 20 53 54 53 41 46 45 2d 41 20 54 45 53 54 20 43 41 20 30 32 30 76 30 10 06 07 2a 86 48 ce 3d 02 01 06 05 2b 81 04 00 22 03 62 00 04 e7 ab d5 ad 60 1e e6 49 57 0b 7a c5 15 a3 3b 27 33 99 15 a3 92 5a 4d 49 0b 09 80 15 ae 08 50 a8 1e c0 8f 2e ff 4e 04 ea ee e4 a1 79 49 52 80 7a e0 b4 67 a8 b4 39 87 97 09 76 38 5a 9b 04 c9 50 99 02 fc fc c3 49 af e4 54 8a 77 3e a2 b7 b8 8e 2b f6 2c f0 0b 8f e9 ec 49 77 ab 24 da 7b 14 7a a3 13 30 11 30 0f 06 03 55 1d 13 01 01 ff 04 05 30 03 01 01 ff 30 0a 06 08 2a 86 48 ce 3d 04 03 03 03 68 00 30 65 02 30 51 02 5a eb 7a 19 03 a6 3d db f7 55 96 64 d4 b1 a4 db 20 1e 3b 7a 89 5d be 7f 91 a6 16 ab 78 98 22 fe 94 bc 53 6b 60 91 00 54 f2 50 15 c3 f8 ed 02 31 00 94 12 c4 7e 6d 57 55 66 9a 18 d7 14 73 51 3d fd ee 78 56 79 90 df 97 a5 17 41 f3 0f 88 1e fb c1 73 06 15 64 9e 8b 14 ed b8 1e c3 07 ab 54 8b 2f 30 82 01 c5 30 82 01 4b a0 03 02 01 02 02 0b 02 09 80 56 e1 21 c4 e1 d0 01 39 30 0a 06 08 2a 86 48 ce 3d 04 03 03 30 4f 31 0b 30 09 06 03 55 04 06 13 02 4e 4c 31 1e 30 1c 06 03 55 04 0a 0c 15 53 54 4d 69 63 72 6f 65 6c 65 63 74 72 6f 6e 69 63 73 20 6e 76 31 20 30 1e 06 03 55 04 03 0c 17 53 54 4d 20 53 54 53 41 46 45 2d 41 20 54 45 53 54 20 43 41 20 30 32 30 20 17 0d 32 33 30 35 31 39 30 30 30 30 30 30 5a 18 0f 32 30 35 33 30 35 31 39 30 30 30 30 30 30 5a 30 40 31 0d 30 0b 06 03 55 04 0a 0c 04 43 4e 42 55 31 2f 30 2d 06 03 55 04 03 0c 26 45 56 41 4c 4d 43 52 50 53 58 58 2d 30 32 30 42 30 32 30 39 38 30 35 36 45 31 32 31 43 34 45 31 44 30 30 31 33 39 30 76 30 10 06 07 2a 86 48 ce 3d 02 01 06 05 2b 81 04 00 22 03 62 00 04 ab 0f 9a 40 71 59 ee 76 eb 92 a7 9c de 0f 6d 1c 4d 39 d2 6d 51 91 12 50 e2 87 51 44 a2 5c 95 16 63 bd 34 13 54 05 de a7 62 85 eb a1 49 cf ea 5b bf 21 2b 9d 55 4e 19 15 92 6f 00 05 75 6e 2c 7c d3 ad d2 85 98 2e 40 82 1d cb c9 18 47 ae 01 9f 70 29 87 8e 77 87 6a 3c 15 af fe 4c e0 37 38 75 30 0a 06 08 2a 86 48 ce 3d 04 03 03 03 68 00 30 65 02 30 29 91 7c 07 6a da 01 91 ef 34 2c db e6 01 e8 a7 6a ff cf 83 24 66 50 54 11 d9 27 c3 48 a9 84 a2 11 c3 04 1e d0 97 76 94 5d 7f bb 9f 67 9a 0e 9d 02 31 00 95 12 b2 42 d5 e6 73 e4 f2 37 3a c2 3a ca 8e 19 fa a0 ba 98 af ea 75 60 9f 5d 8c da 1d 4b bb 2c 19 87 cc 54 f3 01 a2 be 32 d8 2e 3a 08 10 ca bf
+-----OPTIONAL STEP - VERIFYING IF LEAF CERT WAS SIGNED BY ROOT(should be done by Requester)---------------------------
+Chain of trust verified successfully!
+----------------------------------------------------------------------
+CHALLENGE
+Sending Command:  12 83 00 00 f2 ce cf 20 51 40 01 d9 15 3d 2b 65 af 02 f5 c1 e2 c7 a2 91 bf 26 25 a8 62 92 4a 67 73 c5 c4 41  
+Received Response:  12 03 00 01 ca e5 6c fb d5 bc ca 21 f7 43 74 7e 37 36 e3 78 4d f1 a1 e4 31 b9 f8 54 20 ed f7 41 55 63 1f f3 a6 4d ea 67 d3 51 b6 bc d8 ca a4 3f 81 0a 1b 5f 8b 24 14 54 93 d9 80 11 4c e4 b4 49 34 58 65 23 c7 88 a3 f3 dc 5e ea 05 c1 82 52 80 8e 7c 58 e7 db 67 e8 25 6b f0 a4 30 84 05 39 aa d3 82 58 8f ae 04 1d b5 ef 30 4a 0f 0e 75 f2 51 b0 4c 17 ba af 69 e8 97 a6 c3 6d 2d 70 aa 87 89 e7 65 f2 a9 ab cf 31 2d 4e 82 aa 72 d1 04 d2 bd 72 26 5c 2a e1 d8 ff 2f 11 9d 95 02 13 82 1d ca 5c e9 e6 c7 d5 55 47 1e 4e 78 ec d0 e7 2d 7b dc 0b 75 42 33
+
+ Curve type: secp384r1
+Above curve type value secp256r1 or prime256v1 correspond to NIST P-256, value secp384r1 correspond to NIST P-384
+
+Public key value: 04ab0f9a407159ee76eb92a79cde0f6d1c4d39d26d51911250e2875144a25c951663bd34135405dea76285eba149cfea5bbf212b9d554e1915926f0005756e2c7cd3add285982e40821dcbc91847ae019f7029878e77876a3c15affe4ce0373875
+
+
+  - Computed M2 hash: 9334ebf71c735fe317d8c8f2a93177884ea94c44da642061e2f5e27c296b7a687d2da6d24d490b14d9e38c02e4d26289
+ - Computed digest for signing: e3b224d4a98fe2e8545351b5bb4672075ae83d1ff7b96364baaacc1c2e8fefd9d66f27e62e4e486d8fb5a819c0a51a5d
+  - Received signature: db67e8256bf0a430840539aad382588fae041db5ef304a0f0e75f251b04c17baaf69e897a6c36d2d70aa8789e765f2a9abcf312d4e82aa72d104d2bd72265c2ae1d8ff2f119d950213821dca5ce9e6c7d555471e4e78ecd0e72d7bdc0b754233
+signature verification is successful. Device is authenticated
+----------------------------------------------------------------------
+GET_MEASUREMENTS
+Sending Command:  12 e0 00 01
+Received Response:  12 60 00 00 01 00 00 37 01 01 00 33 00 00 30 eb 4e c8 e2 eb 60 dc 10 ae a2 7a 70 05 74 ba 56 9b 4d 19 ef af e3 65 c0 d1 ca 87 57 61 69 7c 1f 6d 98 35 3a 98 c4 c2 8b ca 92 05 67 d7 da 06 3f 1a 95 39 ae a7 7a b7 f1 8c bd b7 00 71 c2 59 39 99 36 f5 e5 18 56 3c 22 ca 36 10 2f ec 1a 3a cd
+Measurement Hash:  eb 4e c8 e2 eb 60 dc 10 ae a2 7a 70 05 74 ba 56 9b 4d 19 ef af e3 65 c0 d1 ca 87 57 61 69 7c 1f 6d 98 35 3a 98 c4 c2 8b ca 92 05 67 d7 da 06 3f
+Measurement Nonce:  1a 95 39 ae a7 7a b7 f1 8c bd b7 00 71 c2 59 39 99 36 f5 e5 18 56 3c 22 ca 36 10 2f ec 1a 3a cd
+----------------------------------------------------------------------
+GET_MEASUREMENTS
+Sending Command:  12 e0 01 02 c7 07 4d 6c 7d d8 7b 18 43 a5 e1 bf 41 7a 88 e6 8a 50 49 1d a4 78 37 2f 6a 73 71 19 79 fd 31 35 00
+Received Response:  12 60 00 00 01 00 00 37 02 01 00 33 00 00 30 f8 f3 6f 7b 1c 20 5f 10 f6 07 71 4d 63 ba 9f a3 06 ca 57 0e 58 a1 3a 79 45 86 5e 66 2e 1e f8 8d f4 ad 0c aa b1 ba 2c 08 0b 15 cb e6 d1 2b e1 33 c4 eb 4f 0c eb b5 60 62 dc 68 d8 1b ee bb 99 d7 79 f8 6a 42 a4 b1 34 03 07 be 89 68 12 f0 ea 27 00 8c a7 12 cb 8c 46 c8 57 11 aa c9 86 80 b7 3f a7 79 16 93 59 af 20 da 9e 25 64 6a d5 ca 09 54 49 f7 db 92 64 3d 5d 42 28 17 4e 81 05 40 c1 30 5f f1 f1 47 18 52 36 f4 6a 4f 24 8b d6 78 a2 43 0b 18 79 c4 c4 33 86 ac 34 79 4b a7 d5 86 fd e9 64 6b 29 f3 f0 d6 09 a6 f3 2e ee e3 22 2a 11 1b
+Measurement Hash:  f8 f3 6f 7b 1c 20 5f 10 f6 07 71 4d 63 ba 9f a3 06 ca 57 0e 58 a1 3a 79 45 86 5e 66 2e 1e f8 8d f4 ad 0c aa b1 ba 2c 08 0b 15 cb e6 d1 2b e1 33
+Measurement Nonce:  c4 eb 4f 0c eb b5 60 62 dc 68 d8 1b ee bb 99 d7 79 f8 6a 42 a4 b1 34 03 07 be 89 68 12 f0 ea 27
+  - Computed L2 hash: c9d7ef43b2e47f97c31762f52b923863650096a373ee69d8ea86784ffeed4646684d434bb3427ce8838318199039aa2d
+  - Received signature: 008ca712cb8c46c85711aac98680b73fa779169359af20da9e25646ad5ca095449f7db92643d5d4228174e810540c1305ff1f147185236f46a4f248bd678a2430b1879c4c43386ac34794ba7d586fde9646b29f3f0d609a6f32eeee3222a111b
+signature verification is successful. Measurements authenticated
+----------------------------------------------------------------------
+GET_MEASUREMENTS
+Sending Command:  12 e0 01 03 2f 30 e7 8f 4c 0a 63 16 f5 1b f7 46 5c b2 7d af a5 d5 6b 49 5e 38 06 f0 bc 2a 65 e0 18 58 2b bb 00
+Received Response:  12 60 00 00 01 00 00 37 03 01 00 33 00 00 30 62 48 b3 fe 58 94 3d 8a 3d 39 0f 7f 11 fb a9 c1 5a 07 fe 33 64 93 c3 10 25 bc 31 78 d6 58 51 82 6a fa 86 da 0c dc ae 34 be 9b d7 69 4a f1 b2 d3 5b 5c cd 1c b7 a0 c2 ca ce fb 9e b0 ff 32 cf 34 9e ac d2 8f 84 20 4d d0 9e 33 c9 17 73 60 24 1f f1 b9 95 2e 7e fc 1a cd 0b 61 51 85 ef 00 2d c7 10 11 1e 1c 2b 46 27 cc cf ff 2c dd cc 1e f2 a9 11 3e f3 6d 06 42 a3 61 8f 78 79 7f 4a 67 12 bc da f3 ee 0f d6 40 11 e0 55 a0 d5 bd 51 24 07 d7 d4 d0 95 dc 22 8d 86 e7 11 8d 56 0a 22 82 17 40 71 9e 3b 86 9a ef 4e 37 a5 8f 63 28 27 83 0b dc
+Measurement Hash:  62 48 b3 fe 58 94 3d 8a 3d 39 0f 7f 11 fb a9 c1 5a 07 fe 33 64 93 c3 10 25 bc 31 78 d6 58 51 82 6a fa 86 da 0c dc ae 34 be 9b d7 69 4a f1 b2 d3
+Measurement Nonce:  5b 5c cd 1c b7 a0 c2 ca ce fb 9e b0 ff 32 cf 34 9e ac d2 8f 84 20 4d d0 9e 33 c9 17 73 60 24 1f
+  - Computed L2 hash: 4c37d30dc8f0a0775393dafedca529f3a06d73b4056cfd043db5803022037c3c05033c17ace4ede2df2b1801e8686323
+  - Received signature: f1b9952e7efc1acd0b615185ef002dc710111e1c2b4627cccfff2cddcc1ef2a9113ef36d0642a3618f78797f4a6712bcdaf3ee0fd64011e055a0d5bd512407d7d4d095dc228d86e7118d560a22821740719e3b869aef4e37a58f632827830bdc
+signature verification is successful. Measurements authenticated
+OK
+.
+----------------------------------------------------------------------
+Ran 6 tests in 3.769s
+
+OK

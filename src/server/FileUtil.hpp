@@ -19,7 +19,7 @@ namespace storage {
 
             size_t FileSize(){
                 struct stat s;
-                if(stat(filename.c_str(),&s)==-1){
+                if(stat(filename_.c_str(),&s)==-1){
                     std::cerr << "获取文件大小失败: " << strerror(errno) << std::endl;
                     return 0;
                 }
@@ -61,7 +61,7 @@ namespace storage {
                 file.seekg(0,std::ios::end);
                 content->resize(file.tellg());
                 file.seekg(0,std::ios::beg);
-                file.read(&(content)[0],content->size());
+                file.read(&(*content)[0],content->size());
                 file.close();
 
                 return true;
@@ -87,7 +87,7 @@ namespace storage {
             bool CreateDirectory(){
                 if(Exists())
                     return true;
-                return fs::create_directorise(filename_);
+                return fs::create_directories(filename_);
             }
 
             bool ScanDirectory(std::vector<std::string>* files){//有改进空间
@@ -101,7 +101,7 @@ namespace storage {
                     }
                 }
 
-                return true
+                return true;
             }
-    }
+    };
 }

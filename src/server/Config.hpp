@@ -24,7 +24,7 @@ namespace storage{
                 return &instance;
             }
 
-            bool Load(const std::string& config_file="./Storge.conf"){
+            bool Load(const std::string& config_file="./Storage.conf"){
                 std::ifstream file(config_file);
                 if(!file.is_open()){
                     std::cerr << "无法打开配置文件: " << config_file << std::endl;
@@ -57,5 +57,5 @@ namespace storage{
             std::string GetLowStorageDir() const { return low_storage_dir_; }
             std::string GetStorageInfoFile() const { return storage_info_; }
 
-    }
+    };
 }
