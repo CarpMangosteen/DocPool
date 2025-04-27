@@ -10,6 +10,11 @@ namespace mylog
 {
     namespace Util
     {
+        class Date
+        {
+        public:
+            static time_t Now(){return time(nullptr);}
+        };
         class File
         {
         public:
