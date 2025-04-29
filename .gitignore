@@ -1,3 +1,17 @@
 src/server/Storage.conf
 **/logfile/
 /build/
+**/deep_storage/
+**/low_storage/
+
+
+
+# --- 编译文件 ---
+**.o
+**.a
+**.so
+**.out
+**.d
+src/server/test
+src/server/gdb_test
+src/server/storage.data

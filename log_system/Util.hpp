@@ -146,7 +146,7 @@ namespace mylog
                 JsonData(){
                     std::string content;
                     mylog::Util::File file;
-                    if(file.GetContent(&content,"./logsystem_config.conf")==false){
+                    if(file.GetContent(&content,"../../log_system/config.conf")==false){
                         std::cout << __FILE__ << __LINE__ << "open logsystem_config.conf failed" << std::endl;
                         perror(NULL);
                     }
