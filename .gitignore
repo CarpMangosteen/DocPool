@@ -1,2 +1,3 @@
 src/server/Storage.conf
-Config.conf
+**/logfile/
+/build/

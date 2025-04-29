@@ -155,7 +155,7 @@ namespace mylog
         template <typename FlushType, typename... Args>
         static std::shared_ptr<LogFlush> CreateLog(Args &&...args)
         {
-            return std::make_shared<FlushType>(std::forward<Args>(args)...)
+            return std::make_shared<FlushType>(std::forward<Args>(args)...);
         }
     };
 } // namespace mylog

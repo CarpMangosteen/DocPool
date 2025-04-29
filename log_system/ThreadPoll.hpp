@@ -7,6 +7,7 @@
 #include <functional>
 #include <thread>
 #include <future>
+#include<stdexcept>
 
 class ThreadPoll
 {
@@ -46,11 +47,11 @@ public:
     {
         using return_type = typename std::result_of<F(Args...)>::type;
         // 创建打包任务
-        auto task = std::make_shared<std::packaged_task<return_type>>(std::bind(std::forward<F>(f), std::forward<Args>(args)...));
+        auto task = std::make_shared<std::packaged_task<return_type()>>(std::bind(std::forward<F>(f), std::forward<Args>(args)...));
 
         std::future<return_type> res = task->get_future();
         {
-            std::unique_loc<std::mutex> lock(queue_mutex);
+            std::unique_lock<std::mutex> lock(queue_mutex);
 
             if (stop)
             {
